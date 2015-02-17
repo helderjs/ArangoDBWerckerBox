@@ -1,5 +1,5 @@
 name: arangodb
-version: 0.0.1
+version: 0.0.2
 type: service
 platform: ubuntu@12.04
 description: Wercker box for ArangoDB. An open source multi-model database
@@ -12,6 +12,7 @@ keywords:
 packages:
   - arangodb@2.4.3
 script: |
+  apt-get install wget
   wget https://www.arangodb.com/repositories/arangodb2/xUbuntu_12.04/Release.key
   apt-key add - < Release.key
   echo 'deb https://www.arangodb.com/repositories/arangodb2/xUbuntu_12.04/ /' >> /etc/apt/sources.list.d/arangodb.list
