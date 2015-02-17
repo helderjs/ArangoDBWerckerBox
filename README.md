@@ -11,6 +11,10 @@ The MIT License (MIT)
 
 # Changelog
 
+## 0.0.2
+
+- Get release key directly
+
 ## 0.0.1
 
-- Initial release
+- Initial release. Add key manually
