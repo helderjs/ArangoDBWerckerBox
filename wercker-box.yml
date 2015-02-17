@@ -12,9 +12,8 @@ keywords:
 packages:
   - arangodb@2.4.3
 script: |
-  sudo apt-get install wget
-  wget https://www.arangodb.com/repositories/arangodb2/xUbuntu_12.04/Release.key
-  apt-key add - < Release.key
+  cp Release.key /tmp/Release.key
+  apt-key add - < /tmp/Release.key
   echo 'deb https://www.arangodb.com/repositories/arangodb2/xUbuntu_12.04/ /' >> /etc/apt/sources.list.d/arangodb.list
   sudo apt-get update
   sudo apt-get install arangodb=2.4.3
