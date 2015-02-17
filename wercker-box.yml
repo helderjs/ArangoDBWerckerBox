@@ -13,8 +13,8 @@ packages:
   - arangodb@2.4.3
 script: |
   cp Release.key /tmp/Release.key
-  apt-key add - < /tmp/Release.key
-  echo 'deb https://www.arangodb.com/repositories/arangodb2/xUbuntu_12.04/ /' >> /etc/apt/sources.list.d/arangodb.list
+  sudo apt-key add - < /tmp/Release.key
+  sudo su -c "echo 'deb https://www.arangodb.com/repositories/arangodb2/xUbuntu_12.04/ /' >> /etc/apt/sources.list.d/arangodb.list"
   sudo apt-get update
   sudo apt-get install arangodb=2.4.3
 env:
