@@ -10,11 +10,14 @@ keywords:
   - database
   - json
 packages:
+  - wget
+  - apt-transport-https
   - arangodb@2.4.3
 script: |
-  sudo apt-get install apt-transport-https
-  cp Release.key /tmp/Release.key
-  sudo apt-key add - < /tmp/Release.key
+  sudo apt-get update
+  sudo apt-get install wget apt-transport-https
+  wget https://www.arangodb.com/repositories/arangodb2/xUbuntu_12.04/Release.key
+  sudo apt-key add - < Release.key
   sudo su -c "echo 'deb https://www.arangodb.com/repositories/arangodb2/xUbuntu_12.04/ /' >> /etc/apt/sources.list.d/arangodb.list"
   sudo apt-get update
   sudo apt-get install arangodb=2.4.3
