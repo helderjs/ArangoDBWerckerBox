@@ -1,0 +1,13 @@
+# ArangoDB Wecker Box
+
+A wercker box with ArangoDB installed.
+
+# License
+
+The MIT License (MIT)
+
+# Changelog
+
+## 0.0.1
+
+- Initial release
